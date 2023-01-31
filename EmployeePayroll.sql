@@ -97,3 +97,9 @@ update empoyee_payrolls
 set TaxablePay=0,IncomeTax=0
 
 select * from empoyee_payrolls
+
+
+------- UC 10: Adding another Value for Gayathri in Editing Department -------
+
+Insert into empoyee_Payrolls(name,salary,startDate,Address,EmployeePhoneNumber,EmployeeDepartment) values ('Gayathri',240000,'2021-04-20','Chennai,TN','9600054540','Editing')
+select * from empoyee_payrolls
