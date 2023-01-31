@@ -1,6 +1,8 @@
 --UC-1 creating database---
 create database EmployeeServices
 
+drop table empoyee_payrolls
+
 --UC-2 creating Table
 create Table empoyee_payrolls
 (
@@ -9,6 +11,8 @@ name varchar(200) not null,
 salary float,
 startDate date
 )
+
+
 
 --UC-3 Insert values in Table
 
@@ -29,4 +33,16 @@ select * from empoyee_payrolls
 
 ------- UC 5: Select Query using Cast() an GetDate() -------
 select salary from empoyee_payrolls where name='Mahesh'
-select salary from empoyee_payrolls where startDate BETWEEN Cast('2020-04-18' as Date) and GetDate();
+select salary from empoyee_payrolls where startDate BETWEEN Cast('2020-04-18' as Date) and GetDate()
+
+------- UC 6: Add Gender Column and Update Table Values -------
+Alter table empoyee_payrolls
+add Gender char(1);
+
+Update empoyee_payrolls 
+set Gender='M'
+where name='Mahesh' or name='Ram'
+
+Update empoyee_payrolls 
+set Gender='F'
+where name='Gayathri' or name='Aruna'
