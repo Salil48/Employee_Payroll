@@ -75,3 +75,25 @@ where name ='Gayathri'
 Update empoyee_payrolls 
 set EmployeePhoneNumber='8715605050',Address='Bareilly,UP'
 where name ='Aruna'
+
+------- UC 9:Add Deduction,Taxable pay, Income Pay , Netpay -------
+
+
+Alter table empoyee_payrolls
+add Deduction float,TaxablePay float, IncomeTax float,NetPay float
+
+Update empoyee_payrolls 
+set Deduction=1000
+where Gender='F'
+
+Update empoyee_payrolls 
+set Deduction=2000
+where Gender='M'
+
+update empoyee_payrolls
+set NetPay=(salary - Deduction)
+
+update empoyee_payrolls
+set TaxablePay=0,IncomeTax=0
+
+select * from empoyee_payrolls
