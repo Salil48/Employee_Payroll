@@ -23,6 +23,7 @@ Insert into empoyee_payrolls values('Gayathri',10000,'2021-05-13')
 Insert into empoyee_payrolls values('Aruna',30000,'2021-08-19')
 
 
-
+--UC-4 Retrieve All data--
+select * from empoyee_payrolls
 
 
