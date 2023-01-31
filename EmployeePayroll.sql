@@ -27,3 +27,6 @@ Insert into empoyee_payrolls values('Aruna',30000,'2021-08-19')
 select * from empoyee_payrolls
 
 
+------- UC 5: Select Query using Cast() an GetDate() -------
+select salary from empoyee_payrolls where name='Mahesh'
+select salary from empoyee_payrolls where startDate BETWEEN Cast('2020-04-18' as Date) and GetDate();
